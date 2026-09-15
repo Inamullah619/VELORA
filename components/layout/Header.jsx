@@ -1,7 +1,11 @@
 import React from "react";
 
 const Header = () => {
-  return <div className="bg-natural w-full">Header</div>;
+  return (
+    <header className="bg-natural w-full">
+      <nav>Header</nav>
+    </header>
+  );
 };
 
 export default Header;
