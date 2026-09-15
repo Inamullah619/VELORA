@@ -1,26 +1,151 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ================================
+     VELORA / STITCH COLORS
+     ================================ */
+
+  /* Brand */
+  --primary: #111110;
+  --secondary: #9e5a44;
+  --tertiary: #767571;
+  --natural: #fbfbf9;
+
+  /* Background */
+  --background: #fbfbf9;
+  --foreground: #111110;
+
+  /* Surfaces */
+  --surface: #fbfbf9;
+  --surface-dim: #dadad8;
+  --surface-bright: #f9f9f7;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f4f4f2;
+  --surface-container: #eeeeec;
+  --surface-container-high: #e8e8e6;
+  --surface-container-highest: #e2e3e1;
+
+  /* Text */
+  --text-primary: #111110;
+  --text-secondary: #454441;
+  --text-tertiary: #767571;
+
+  --on-surface: #1a1c1b;
+  --on-surface-variant: #464742;
+
+  /* Borders */
+  --border: #e8e8e4;
+  --border-strong: #c7c7c0;
+  --outline: #777871;
+  --outline-variant: #c7c7c0;
+
+  /* Inverse */
+  --inverse-surface: #2f3130;
+  --inverse-on-surface: #f1f1ef;
+  --inverse-primary: #c9c6c4;
+
+  /* Secondary */
+  --secondary-container: #fdaa8f;
+  --on-secondary: #ffffff;
+  --on-secondary-container: #783c28;
+
+  /* Primary */
+  --on-primary: #ffffff;
+  --primary-container: #1c1c1a;
+  --on-primary-container: #858382;
+
+  /* Error */
+  --error: #ba1a1a;
+  --error-surface: #ffdad6;
+
+  /* Typography */
+  --font-body: var(--font-geist);
+  --font-display: var(--font-playfair);
 }
 
 @theme inline {
+  /* ================================
+     COLORS
+     ================================ */
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-natural: var(--natural);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-surface: var(--surface);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-bright: var(--surface-bright);
+
+  --color-surface-lowest: var(--surface-container-lowest);
+  --color-surface-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-high: var(--surface-container-high);
+  --color-surface-highest: var(--surface-container-highest);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+
+  --color-error: var(--error);
+  --color-error-surface: var(--error-surface);
+
+  /* Typography */
+  --font-sans: var(--font-geist);
+  --font-display: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
